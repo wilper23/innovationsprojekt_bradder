@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
     slides[currentSlide].classList.add('active');
   }
   
-  // Change slide every 4 seconds
-  setInterval(showNextSlide, 4000);
+  // Change slide every 6 seconds
+  setInterval(showNextSlide, 6000);
 });
 
 // Smooth scroll for anchor links (already handled by CSS, but this adds support for older browsers)
