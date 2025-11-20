@@ -268,22 +268,18 @@ body {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.slideshow-wrapper {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  transition: transform 1.5s ease-in-out;
+}
+
 .slideshow-container .slide {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
+  flex: 0 0 33.333%;
+  width: 33.333%;
   height: 100%;
   object-fit: cover;
-  transition: left 1.5s ease-in-out;
-}
-
-.slideshow-container .slide.active {
-  left: 0;
-}
-
-.slideshow-container .slide.prev {
-  left: -100%;
 }
 
 @media (max-width: 968px) {
