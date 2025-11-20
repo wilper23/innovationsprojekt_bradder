@@ -212,6 +212,37 @@ body {
   transform: translateX(3px);
 }
 
+/* Problem Section */
+#problem {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 80px 20px;
+}
+
+.problem-content {
+  max-width: 1200px;
+  text-align: center;
+}
+
+.problem-title {
+  font-size: 4rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+  .problem-title {
+    font-size: 2.5rem;
+  }
+}
+
 /* Features Section */
 #features {
   padding: var(--spacing-2xl) 0;
