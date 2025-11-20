@@ -306,6 +306,35 @@ body {
   }
 }
 
+/* Solution Section */
+.solution-layout {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+}
+
+.solution-text {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+}
+
+.solution-image {
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+
+.solution-image img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 1rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 3px solid rgba(96, 165, 250, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 @media (max-width: 968px) {
   .problem-layout {
     flex-direction: column;
