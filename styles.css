@@ -315,13 +315,13 @@ body {
 }
 
 .solution-text {
-  flex: 1 1 50%;
+  flex: 1 1 60%;
   display: flex;
   align-items: center;
 }
 
 .solution-image {
-  flex: 0 0 50%;
+  flex: 0 0 40%;
   max-width: 100%;
 }
 
