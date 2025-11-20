@@ -5,13 +5,28 @@ document.addEventListener('DOMContentLoaded', function() {
     yearElement.textContent = new Date().getFullYear();
   }
   
-  // Slideshow functionality
+  // Slideshow functionality with horizontal sliding
   const slides = document.querySelectorAll('.slide');
   let currentSlide = 0;
   
   function showNextSlide() {
+    // Mark current as prev
     slides[currentSlide].classList.remove('active');
+    slides[currentSlide].classList.add('prev');
+    
+    // Move to next slide
     currentSlide = (currentSlide + 1) % slides.length;
+    
+    // Reset all slides that aren't current or prev
+    slides.forEach((slide, index) => {
+      if (index !== currentSlide && !slide.classList.contains('active')) {
+        slide.classList.remove('prev');
+        slide.style.left = '100%';
+      }
+    });
+    
+    // Show new slide
+    slides[currentSlide].classList.remove('prev');
     slides[currentSlide].classList.add('active');
   }
   
