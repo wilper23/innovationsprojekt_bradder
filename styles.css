@@ -195,7 +195,7 @@ body {
 
 .btn-white {
   background-color: white;
-  color: hsl(var(--foreground));
+  color: black;
   border: 2px solid white;
 }
 
