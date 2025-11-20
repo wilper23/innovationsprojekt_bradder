@@ -4,6 +4,19 @@ document.addEventListener('DOMContentLoaded', function() {
   if (yearElement) {
     yearElement.textContent = new Date().getFullYear();
   }
+  
+  // Slideshow functionality
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+  
+  function showNextSlide() {
+    slides[currentSlide].classList.remove('active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+  
+  // Change slide every 4 seconds
+  setInterval(showNextSlide, 4000);
 });
 
 // Smooth scroll for anchor links (already handled by CSS, but this adds support for older browsers)
