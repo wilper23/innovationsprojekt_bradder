@@ -1,11 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import bridgeImage from "@/assets/bridge-background.png";
 
 export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-background" />
+      {/* Animated scrolling background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="flex animate-scroll-horizontal">
+          <div 
+            className="min-w-[200%] h-full bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url(${bridgeImage})`,
+              backgroundRepeat: 'repeat-x',
+            }}
+          />
+          <div 
+            className="min-w-[200%] h-full bg-cover bg-center"
+            style={{ 
+              backgroundImage: `url(${bridgeImage})`,
+              backgroundRepeat: 'repeat-x',
+            }}
+          />
+        </div>
+      </div>
+      
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm" />
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 py-24 text-center">
@@ -35,10 +56,6 @@ export const Hero = () => {
           </Button>
         </div>
       </div>
-      
-      {/* Decorative elements */}
-      <div className="absolute top-1/4 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl" />
     </section>
   );
 };
