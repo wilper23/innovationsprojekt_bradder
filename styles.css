@@ -453,7 +453,7 @@ body {
   position: absolute;
   left: 30px;
   top: 0;
-  bottom: 0;
+  height: calc(100% - 3rem);
   width: 3px;
   background: linear-gradient(180deg, rgba(96, 165, 250, 0.5), rgba(96, 165, 250, 0.2));
 }
@@ -489,6 +489,7 @@ body {
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  align-self: center;
 }
 
 .timeline-content:hover {
