@@ -121,9 +121,13 @@ body {
   position: relative;
   z-index: 10;
   text-align: center;
-  padding: var(--spacing-xl) var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-md);
   max-width: 900px;
   animation: fade-in 0.8s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
 }
 
 .hero-title {
@@ -142,18 +146,19 @@ body {
 
 .hero-subtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
-  color: hsl(var(--muted-foreground));
+  color: white;
   margin-bottom: var(--spacing-xl);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-logo {
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
 }
 
