@@ -77,18 +77,16 @@ body {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  max-width: 80px;
-  width: 80px;
+  width: 50px;
   height: auto;
   z-index: 20;
   filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 @media (max-width: 768px) {
   .section-logo {
-    max-width: 50px;
-    width: 50px;
+    width: 35px;
     top: 0.5rem;
     left: 0.5rem;
   }
@@ -255,6 +253,7 @@ body {
 
 /* Problem Section */
 #problem {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -476,6 +475,7 @@ body {
 
 /* Timeline Section */
 #timeline {
+  position: relative;
   min-height: 100vh;
   background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
   display: flex;
@@ -581,12 +581,14 @@ body {
 
 /* Features Section */
 #features {
+  position: relative;
   padding: var(--spacing-2xl) 0;
   background-color: hsl(var(--background));
 }
 
 /* Solution Section */
 #solution {
+  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
