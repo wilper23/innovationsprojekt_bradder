@@ -330,19 +330,21 @@ body {
 .solution-list li {
   font-size: 1.5rem;
   line-height: 2.2;
-  color: #ffffff;
+  color: #ffffff !important;
   padding-left: 2rem;
   position: relative;
+  margin-bottom: 0.5rem;
 }
 
 .solution-list li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #ffffff;
+  top: 0;
+  color: #ffffff !important;
   font-size: 1.5rem;
   font-weight: bold;
-  top: 0;
+  line-height: 2.2;
 }
 
 .solution-image {
