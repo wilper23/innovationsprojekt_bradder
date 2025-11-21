@@ -34,3 +34,22 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Solution section slideshow navigation
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.solution-slide');
+  const prevBtn = document.querySelector('.solution-nav-btn.prev');
+  const nextBtn = document.querySelector('.solution-nav-btn.next');
+  let currentSlide = 0;
+
+  function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+  }
+
+  if (prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => showSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => showSlide(currentSlide + 1));
+  }
+});
